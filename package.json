@@ -16,9 +16,64 @@
 	"bin": {
 		"xlsx": "./bin/xlsx.njs"
 	},
-	"main": "./xlsx",
+	"main": "xlsx.js",
+	"module": "xlsx.mjs",
+	"types": "types/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./xlsx.mjs",
+			"require": "./xlsx.js",
+			"types": "./types/index.d.ts"
+		},
+		"./xlsx.mjs": {
+			"import": "./xlsx.mjs",
+			"types": "./types/index.d.ts"
+		},
+		"./xlsx.js": {
+			"require": "./xlsx.js",
+			"types": "./types/index.d.ts"
+		},
+		"./dist/xlsx.zahl": {
+			"import": "./dist/xlsx.zahl.mjs",
+			"require": "./dist/xlsx.zahl.js",
+			"types": "./dist/zahl.d.ts"
+		},
+		"./dist/xlsx.zahl.mjs": {
+			"import": "./dist/xlsx.zahl.mjs",
+			"types": "./dist/zahl.d.ts"
+		},
+		"./dist/xlsx.zahl.js": {
+			"require": "./dist/xlsx.zahl.js",
+			"types": "./dist/zahl.d.ts"
+		},
+		"./dist/cpexcel": {
+			"import": "./dist/cpexcel.full.mjs",
+			"require": "./dist/cpexcel.js",
+			"types": "./dist/cpexcel.d.ts"
+		},
+		"./dist/cpexcel.js": {
+			"require": "./dist/cpexcel.js",
+			"types": "./dist/cpexcel.d.ts"
+		},
+		"./dist/cpexcel.full": {
+			"import": "./dist/cpexcel.full.mjs",
+			"require": "./dist/cpexcel.js",
+			"types": "./dist/cpexcel.d.ts"
+		},
+		"./dist/cpexcel.full.mjs": {
+			"import": "./dist/cpexcel.full.mjs",
+			"types": "./dist/cpexcel.d.ts"
+		}
+	},
+	"browser": {
+		"buffer": false,
+		"crypto": false,
+		"stream": false,
+		"process": false,
+		"fs": false
+	},
 	"dependencies": {
-		"ssf": "~0.8.1",
+		"ssf": "~0.11.2",
 		"codepage": "~1.3.6",
 		"cfb": ">=0.10.0",
 		"jszip": "2.4.0",
