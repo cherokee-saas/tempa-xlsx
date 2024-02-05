@@ -12152,7 +12152,7 @@ var XmlNode = (function () {
     return this;
   }
 
-  var APOS = "'"; QUOTE = '"'
+  var APOS = "'", QUOTE = '"'
   var ESCAPED_QUOTE = {  }
   ESCAPED_QUOTE[QUOTE] = '&quot;'
   ESCAPED_QUOTE[APOS] = '&apos;'
